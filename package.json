@@ -1,0 +1,19 @@
+{
+  "name": "solid-visualization",
+  "version": "1.0.0",
+  "description": "Visualisação Github Projetos Relevantes",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DanielVenturini/solid-visualization.git"
+  },
+  "author": "Luiz && Daniel",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/DanielVenturini/solid-visualization/issues"
+  },
+  "homepage": "https://github.com/DanielVenturini/solid-visualization#readme"
+}
