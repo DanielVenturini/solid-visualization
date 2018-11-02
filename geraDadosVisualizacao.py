@@ -24,8 +24,14 @@ def getLinguagens(file):
 			hashmap[str(linguagem)] = 1
 
 	for linguagem in hashmap.keys():
-		print('{value:' + str(hashmap.get(str(linguagem))) + ', name:"'+linguagem+'"},')
+		id = linguagem[0] + linguagem[-1]
+		order = 10
+		score = hashmap.get(str(linguagem))
+		weight = 10
+		color = '#4D9DB4'
+		label = linguagem
+		print('"{0}","{1}",      "{2}",      "{3}","{4}","{5}"'.format(id, order, score, weight, color, label))
 
-getLinguagens(open('Star1000.json'))
+getLinguagens(open('Data/Forks.json'))
 
 #geraDadosVisualizacao(open('Star1000.json'))
