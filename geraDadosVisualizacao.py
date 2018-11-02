@@ -30,8 +30,25 @@ def getLinguagens(file):
 		weight = 10
 		color = '#4D9DB4'
 		label = linguagem
-		print('"{0}","{1}",      "{2}",      "{3}","{4}","{5}"'.format(id, order, score, weight, color, label))
+		print('"{0}","{1}","{2}","{3}","{4}","{5}"'.format(id, order, score, weight, color, label))
 
-getLinguagens(open('Data/Forks.json'))
+def getQtdLicencas(file):
+	dados = json.load(file)
+	hashmap = {}
+
+	for repositorio in dados:
+		license = repositorio['license']
+		try:
+			qtd = hashmap[str(license)]
+			qtd += 1
+			hashmap[str(license)] = qtd
+		except KeyError:
+			hashmap[str(license)] = 1
+
+	for license in hashmap.keys():
+		print("{0}:{1}".format(license, hashmap.get(license)))
+
+#getLinguagens(open('Data/Forks.json'))
+getQtdLicencas(open('Data/Estrela.json'))
 
 #geraDadosVisualizacao(open('Star1000.json'))
