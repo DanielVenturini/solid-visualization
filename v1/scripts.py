@@ -1,15 +1,6 @@
 import json
 
-def geraDadosVisualizacao(file):
-    dados = json.load(file)
-    print("[")
-    print("['Nome', 'Estrela', 'Forks', 'Grupo', 'Tamanho'],")
-    for i, repositorio in enumerate(dados):
-        print("['{0}', {1}, {2}, '{3}', {4}]".format(repositorio['name'], repositorio['stargazers_count'], repositorio['forks_count'], 'Estrelas', repositorio['size']))
-        if not i == len(dados)-1:       # não é o último repositório
-            print(",")                  # printa a vírgula
-    print("]")
-
+# recupera a quantidade de projetos com cada linguagem
 def getLinguagens(file):
 	dados = json.load(file)
 	hashmap = {}
@@ -24,14 +15,10 @@ def getLinguagens(file):
 			hashmap[str(linguagem)] = 1
 
 	for linguagem in hashmap.keys():
-		id = linguagem[0] + linguagem[-1]
-		order = 10
 		score = hashmap.get(str(linguagem))
-		weight = 10
-		color = '#4D9DB4'
-		label = linguagem
-		print('"{0}","{1}","{2}","{3}","{4}","{5}"'.format(id, order, score, weight, color, label))
+		print('{0} - {1}'.format(score, linguagem))
 
+# recupera a quantidade de projetos com cada licença
 def getQtdLicencas(file):
 	dados = json.load(file)
 	hashmap = {}
@@ -48,7 +35,7 @@ def getQtdLicencas(file):
 	for license in hashmap.keys():
 		print("{0}:{1}".format(license, hashmap.get(license)))
 
-# getLinguagens(open('Data/Forks.json'))
+getLinguagens(open('Data/Estrela.json'))
 # getQtdLicencas(open('Data/Estrela.json'))
 
 #geraDadosVisualizacao(open('Star1000.json'))
