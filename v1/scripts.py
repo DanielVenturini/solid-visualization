@@ -33,9 +33,7 @@ def getQtdLicencas(file):
 			hashmap[str(license)] = 1
 
 	for license in hashmap.keys():
-		print("{0}:{1}".format(license, hashmap.get(license)))
+		print("{0} {1}".format(hashmap.get(license), license))
 
-getLinguagens(open('Data/Estrela.json'))
-# getQtdLicencas(open('Data/Estrela.json'))
-
-#geraDadosVisualizacao(open('Star1000.json'))
+# getLinguagens(open('../Data/Estrela.json'))
+getQtdLicencas(open('../Data/Forks.json'))
