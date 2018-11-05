@@ -66,5 +66,8 @@ def geraDados(fileName, data, permissao):
     fileWriter.write(']\n')
     fileWriter.close()
 
-geraDados('../Data/Estrela.json', 'Estrelas', 'w')
-geraDados('../Data/Forks.json', 'Forks', 'a')
+# geraDados('../Data/Estrela.json', 'Estrelas', 'w')
+# geraDados('../Data/Forks.json', 'Forks', 'a')
+geraDados('../Data/soStars.Json', 'Estrelas', 'w')
+geraDados('../Data/soForks.json', 'Forks', 'a')
+geraDados('../Data/ambosJson.json', 'Ambos', 'a')

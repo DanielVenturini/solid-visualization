@@ -35,5 +35,23 @@ def getQtdLicencas(file):
 	for license in hashmap.keys():
 		print("{0} {1}".format(hashmap.get(license), license))
 
+def separaRepositorios(file1='../Data/Estrela.json', file2='../Data/Forks.json'):
+	jsonEstrela = json.load(open(file1))
+	jsonForks = json.load(open(file2))
+
+	fileSEstrela = open('../Data/SomenteEstrela.json', 'w')
+	fileSForks = open('../Data/SomenteForks.json', 'w')
+
+	jsonE = json.load(file1)
+	jsonF = json.load(file2)
+
+	for i, repositorioEstrela in enumerate(jsonEstrela):
+		for i, repositorioForks in enumerate(jsonForks):
+			if repositorioEstrela['full_name'].__eq__(repositorioForks['full_name'])
+
+	fileSEstrela.close()
+	fileSForks.close()
+
 # getLinguagens(open('../Data/Estrela.json'))
-getQtdLicencas(open('../Data/Forks.json'))
+# getQtdLicencas(open('../Data/Forks.json'))
+separaRepositorios()
