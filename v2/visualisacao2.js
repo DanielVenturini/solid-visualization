@@ -9,11 +9,11 @@ option = {
     legend: {
         orient: 'vertical',
         x: 'left',
-        data: ['JavaScript', 'Java', 'Python', 'Go', 'C++', 'HTML', 'Ruby', 'Objective - C', 'CSS', 'C']
+        data: ['JavaScript', 'Java', 'Python', 'Go', 'HTML', 'C++', 'Ruby', 'C', 'Objective - C', 'PHP',  'Outros']
     },
     series: [
         {
-            name: 'aaaa',
+            name: 'Grupo',
             type: 'pie',
             selectedMode: 'single',
             radius: [0, '30%'],
@@ -29,9 +29,10 @@ option = {
                 }
             },
             data: [
-                { value: 388, name: 'Estrelas', selected: true },
+                { value: 612, name: 'Ambos', selected: true },
+                { value: 388, name: 'Estrelas'},
                 { value: 388, name: 'Forks' },
-                { value: 612, name: 'Ambos' }
+                
             ]
         },
         {
@@ -83,16 +84,17 @@ option = {
                 }
             },
             data: [
-                { value: 324, name: 'JavaScript' },
-                { value: 116, name: 'Java' },
-                { value: 94, name: 'Python' },
-                { value: 48, name: 'Go' },
-                { value: 45, name: 'C++' },
-                { value: 42, name: 'HTML' },
-                { value: 39, name: 'Ruby' },
-                { value: 32, name: 'Objective - C' },
-                { value: 31, name: 'CSS' },
-                { value: 30, name: 'C' },
+                { value: 454, name: 'JavaScript' },
+                { value: 162, name: 'Java' },
+                { value: 125, name: 'Python' },
+                { value: 66, name: 'Go' },
+                { value: 61, name: 'HTML' },
+                { value: 58, name: 'C++' },
+                { value: 52, name: 'Ruby' },
+                { value: 42, name: 'C' },
+                { value: 42, name: 'Objective - C' },
+                { value: 41, name: 'PHP' },
+                { value: 285, name: 'Outros' },
                 
             ]
         }
