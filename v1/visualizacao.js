@@ -55,7 +55,7 @@ option = {
         {dim: 1, name: schema[1].text, inverse: false},//, max: 300000},    // estrela
         {dim: 2, name: schema[2].text,
             type: 'category', data: ['Other', 'PHP', 'C', 'CSS', 'Objective-C', 'Ruby', 'HTML', 'C++', 'Go', 'Python', 'Java', 'JavaScript']},
-        {dim: 3, name: schema[3].text, max:  115000},                   // forks
+        {dim: 3, name: schema[3].text},// max:  115000},                   // forks
         {dim: 4, name: schema[4].text},//, max:  797000},                   // commits
         {dim: 5, name: schema[5].text},//, max:   58000},                   // issues
         {dim: 6, name: schema[6].text},// max:   13000},                   // open_issues
