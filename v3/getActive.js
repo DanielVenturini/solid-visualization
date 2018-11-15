@@ -60,4 +60,4 @@ function getData(url) {
     })
 }
 
-getData('https://raw.githubusercontent.com/DanielVenturini/solid-visualization/master/Data/Forks.json')
+getData('https://raw.githubusercontent.com/DanielVenturini/solid-visualization/master/Data/Todos.json')
