@@ -46,9 +46,9 @@ function getData(url) {
             var name = element['full_name']
             var created_at = element['created_at']
 
-            if(created_at < '2011-10-11' || created_at > '2015-09-30') {
+            if(created_at < '2010-10-30' || created_at > '2016-10-30') {
 
-                if(created_at < '2011-10-11')
+                if(created_at < '2010-10-30')
                     data2008.push(name)
                 else
                     data2018.push(name)
