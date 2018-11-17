@@ -1,13 +1,8 @@
-
-
 var myChart = echarts.init(document.getElementById('view'));
 
-fetch(`https://ecomfe.github.io/echarts-examples/public/data/asset/data/life-expectancy-table.json`)
-    
+fetch(`https://ecomfe.github.io/echarts-examples/public/data/asset/data/v4.json`)
     .then(response => response.json())
     .then(function(data ){
-
-
     var sizeValue = '57%';
     var symbolSize = 2.5;
     option = {
