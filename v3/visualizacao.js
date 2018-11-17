@@ -1,4 +1,4 @@
-// CORES
+// CORES => https://www.color-hex.com/
 var fuchsia = '#FF00FF'
 var fundoCalendario = '#FFFF00'
 var linhaMes = '#000'
@@ -19,6 +19,7 @@ function getVirtulData(year) {
         ]);
     }
 
+    console.log(data)
     return data;
 }
 
@@ -50,7 +51,7 @@ option = {
     calendar: [{
         top: 100,
         left: 'center',
-        range: ['2016-01-01', '2017-01-01'],
+        range: ['2017-11-18', '2018-11-16'],
         splitLine: {
             show: true,
             lineStyle: {
@@ -75,7 +76,7 @@ option = {
     }, {
         top: 340,
         left: 'center',
-        range: ['2016-01-01', '2017-01-01'],
+        range: ['2017-11-18', '2018-11-16'],
         splitLine: {
             show: true,
             lineStyle: {
@@ -103,9 +104,9 @@ option = {
             name: 'Normal',
             type: 'scatter',
             coordinateSystem: 'calendar',
-            data: data,
+            data: dadosAntigosNormal,
             symbolSize: function (val) {
-                return val[1] / 500;
+                return val[1] / 5;
             },
             itemStyle: {
                 normal: {
@@ -118,9 +119,9 @@ option = {
             type: 'scatter',
             coordinateSystem: 'calendar',
             calendarIndex: 1,
-            data: data,
+            data: dadosNovosNormal,
             symbolSize: function (val) {
-                return val[1] / 500;
+                return val[1] / 5;
             },
             itemStyle: {
                 normal: {
@@ -133,11 +134,9 @@ option = {
             type: 'effectScatter',
             coordinateSystem: 'calendar',
             calendarIndex: 1,
-            data: data.sort(function (a, b) {
-                return b[1] - a[1];
-            }).slice(0, 12),
+            data: dadosNovosAltaAtividade,
             symbolSize: function (val) {
-                return val[1] / 500;
+                return val[1] / 5;
             },
             showEffectOn: 'render',
             rippleEffect: {
@@ -157,11 +156,9 @@ option = {
             name: 'Alta atividade',
             type: 'effectScatter',
             coordinateSystem: 'calendar',
-            data: data.sort(function (a, b) {
-                return b[1] - a[1];
-            }).slice(0, 12),
+            data: dadosAntigosAltaAtividade,
             symbolSize: function (val) {
-                return val[1] / 500;
+                return val[1] / 5;
             },
             showEffectOn: 'render',
             rippleEffect: {
