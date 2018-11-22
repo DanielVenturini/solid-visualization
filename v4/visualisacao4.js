@@ -1,6 +1,6 @@
 var myChart = echarts.init(document.getElementById('view'));
 
-fetch(`https://ecomfe.github.io/echarts-examples/public/data/asset/data/v4.json`)
+fetch(`https://raw.githubusercontent.com/DanielVenturini/solid-visualization/master/Data/v4.json`)
     .then(response => response.json())
     .then(function(data ){
     var sizeValue = '57%';
@@ -21,16 +21,16 @@ fetch(`https://ecomfe.github.io/echarts-examples/public/data/asset/data/v4.json`
             { left: sizeValue, top: sizeValue }
         ],
         xAxis: [
-            { type: 'value', gridIndex: 0, name: 'Income', axisLabel: { rotate: 50, interval: 0 } },
+            { type: 'log', gridIndex: 0, name: 'Income', axisLabel: { rotate: 50, interval: 0 } },
             { type: 'category', gridIndex: 1, name: 'Country', boundaryGap: false, axisLabel: { rotate: 50, interval: 0 } },
-            { type: 'value', gridIndex: 2, name: 'Income', axisLabel: { rotate: 50, interval: 0 } },
-            { type: 'value', gridIndex: 3, name: 'Life Expectancy', axisLabel: { rotate: 50, interval: 0 } }
+            { type: 'log', gridIndex: 2, name: 'Income', axisLabel: { rotate: 50, interval: 0 } },
+            { type: 'log', gridIndex: 3, name: 'Life Expectancy', axisLabel: { rotate: 50, interval: 0 } }
         ],
         yAxis: [
-            { type: 'value', gridIndex: 0, name: 'Life Expectancy' },
-            { type: 'value', gridIndex: 1, name: 'Income' },
-            { type: 'value', gridIndex: 2, name: 'Population' },
-            { type: 'value', gridIndex: 3, name: 'Population' }
+            { type: 'log', gridIndex: 0, name: 'Life Expectancy' },
+            { type: 'log', gridIndex: 1, name: 'Income' },
+            { type: 'log', gridIndex: 2, name: 'Population' },
+            { type: 'log', gridIndex: 3, name: 'Population' }
         ],
         dataset: {
             dimensions: [
