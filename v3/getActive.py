@@ -112,10 +112,10 @@ def getDataFinal(yearActivity, cabecalho, permissao, valmin, valmax, file='data.
 fileOlds = 'analise/top50Antigo.json'
 fileNew = 'analise/top50Novo.json'
 
-getActive(fileOlds)
-getActive(fileNew)
+#getActive(fileOlds)
+#getActive(fileNew)
 
-getChangedData(fileOlds + 'RESULT.json', 'const dadosAntigosNormal = ', 'w', 0, 70)
-getChangedData(fileOlds + 'RESULT.json', 'const dadosAntigosAltaAtividade = ', 'a', 70, 55550)
-getChangedData(fileNew + 'RESULT.json', 'const dadosNovosNormal = ', 'a', 0, 70)
-getChangedData(fileNew + 'RESULT.json', 'const dadosNovosAltaAtividade = ', 'a', 70, 55550)
+getChangedData(fileOlds + 'RESULT.json', 'const dadosAntigosNormal = ', 'w', 0, 100)
+getChangedData(fileOlds + 'RESULT.json', 'const dadosAntigosAltaAtividade = ', 'a', 100, 1000)
+getChangedData(fileNew + 'RESULT.json', 'const dadosNovosNormal = ', 'a', 0, 100)
+getChangedData(fileNew + 'RESULT.json', 'const dadosNovosAltaAtividade = ', 'a', 100, 1000)
