@@ -1,6 +1,6 @@
 var myChart = echarts.init(document.getElementById('view'));
 
-fetch(`https://raw.githubusercontent.com/DanielVenturini/solid-visualization/master/Data/v4.json`)
+fetch(`https://raw.githubusercontent.com/DanielVenturini/solid-visualization/master/Data/v4-2.json`)
     .then(response => response.json())
     .then(function(data ){
     var sizeValue = '57%';
@@ -18,27 +18,27 @@ fetch(`https://raw.githubusercontent.com/DanielVenturini/solid-visualization/mas
             { right: sizeValue, bottom: sizeValue },
             { left: sizeValue, bottom: sizeValue },
             { right: sizeValue, top: sizeValue },
-            { left: sizeValue, top: sizeValue }
-        ],
-        xAxis: [
-            { type: 'log', gridIndex: 0, name: 'Income', axisLabel: { rotate: 50, interval: 0 } },
-            { type: 'category', gridIndex: 1, name: 'Country', boundaryGap: false, axisLabel: { rotate: 50, interval: 0 } },
-            { type: 'log', gridIndex: 2, name: 'Income', axisLabel: { rotate: 50, interval: 0 } },
-            { type: 'log', gridIndex: 3, name: 'Life Expectancy', axisLabel: { rotate: 50, interval: 0 } }
+            { left: sizeValue, top: sizeValue },
         ],
         yAxis: [
-            { type: 'log', gridIndex: 0, name: 'Life Expectancy' },
-            { type: 'log', gridIndex: 1, name: 'Income' },
-            { type: 'log', gridIndex: 2, name: 'Population' },
-            { type: 'log', gridIndex: 3, name: 'Population' }
+            { type: 'log', gridIndex: 0, name: 'forks' },
+            { type: 'log', gridIndex: 1, name: 'contribuidores' },
+            { type: 'log', gridIndex: 2, name: 'contribuidores' },
+            { type: 'log', gridIndex: 3, name: 'contribuidores' },           
+        ],
+        xAxis: [
+            { type: 'log', gridIndex: 0, name: 'star', axisLabel: { rotate: 50, interval: 0 } },
+            { type: 'category', gridIndex: 1, name: 'linguagem', boundaryGap: false, axisLabel: { rotate: 50, interval: 0 } },
+            { type: 'log', gridIndex: 2, name: 'star', axisLabel: { rotate: 50, interval: 0 } },
+            { type: 'log', gridIndex: 3, name: 'pulls', axisLabel: { rotate: 50, interval: 0 } }
         ],
         dataset: {
             dimensions: [
-                'Income',
-                'Life Expectancy',
-                'Population',
-                'Country',
-                { name: 'Year', type: 'ordinal' }
+                'forks',
+                'star',
+                'contribuidores',
+                'linguagem',
+                'pulls',
             ],
             source: data
         },
@@ -49,8 +49,8 @@ fetch(`https://raw.githubusercontent.com/DanielVenturini/solid-visualization/mas
                 xAxisIndex: 0,
                 yAxisIndex: 0,
                 encode: {
-                    x: 'Income',
-                    y: 'Life Expectancy',
+                    y: 'forks',
+                    x: 'star',
                     tooltip: [0, 1, 2, 3, 4]
                 }
             },
@@ -60,8 +60,8 @@ fetch(`https://raw.githubusercontent.com/DanielVenturini/solid-visualization/mas
                 xAxisIndex: 1,
                 yAxisIndex: 1,
                 encode: {
-                    x: 'Country',
-                    y: 'Income',
+                    y: 'contribuidores',
+                    x: 'linguagem',
                     tooltip: [0, 1, 2, 3, 4]
                 }
             },
@@ -71,8 +71,8 @@ fetch(`https://raw.githubusercontent.com/DanielVenturini/solid-visualization/mas
                 xAxisIndex: 2,
                 yAxisIndex: 2,
                 encode: {
-                    x: 'Income',
-                    y: 'Population',
+                    y: 'contribuidores',
+                    x: 'star',
                     tooltip: [0, 1, 2, 3, 4]
                 }
             },
@@ -82,8 +82,8 @@ fetch(`https://raw.githubusercontent.com/DanielVenturini/solid-visualization/mas
                 xAxisIndex: 3,
                 yAxisIndex: 3,
                 encode: {
-                    x: 'Life Expectancy',
-                    y: 'Population',
+                    y: 'contribuidores',
+                    x: 'pulls',
                     tooltip: [0, 1, 2, 3, 4]
                 }
             }
