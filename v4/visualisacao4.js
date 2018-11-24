@@ -2,9 +2,9 @@ var myChart = echarts.init(document.getElementById('view'));
 
 fetch(`https://raw.githubusercontent.com/DanielVenturini/solid-visualization/master/Data/v4-2.json`)
     .then(response => response.json())
-    .then(function(data ){
-    var sizeValue = '57%';
-    var symbolSize = 2.5;
+    .then(function(data){
+    var sizeValue = '57%'
+    var symbolSize = 2.5
     option = {
         legend: {},
         tooltip: {},
@@ -43,7 +43,7 @@ fetch(`https://raw.githubusercontent.com/DanielVenturini/solid-visualization/mas
             source: data
         },
         series: [
-            {
+            {   
                 type: 'scatter',
                 symbolSize: symbolSize,
                 xAxisIndex: 0,
@@ -86,7 +86,7 @@ fetch(`https://raw.githubusercontent.com/DanielVenturini/solid-visualization/mas
                     x: 'pulls',
                     tooltip: [0, 1, 2, 3, 4]
                 }
-            }
+            },
         ]
     };
 
