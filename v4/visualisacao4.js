@@ -1,13 +1,14 @@
 var myChart = echarts.init(document.getElementById('view'));
 
-fetch(`https://raw.githubusercontent.com/DanielVenturini/solid-visualization/master/Data/v4-2.json`)
+fetch(`https://raw.githubusercontent.com/DanielVenturini/solid-visualization/master/Data/v4-4.json`)
     .then(response => response.json())
     .then(function(data){
-    var sizeValue = '57%'
-    var symbolSize = 2.5
+    var sizeValue = '58%'
+    var symbolSize = 3.5
     option = {
         legend: {},
         tooltip: {},
+        
         toolbox: {
             left: 'center',
             feature: {
@@ -21,16 +22,16 @@ fetch(`https://raw.githubusercontent.com/DanielVenturini/solid-visualization/mas
             { left: sizeValue, top: sizeValue },
         ],
         yAxis: [
-            { type: 'log', gridIndex: 0, name: 'forks' },
-            { type: 'log', gridIndex: 1, name: 'contribuidores' },
-            { type: 'log', gridIndex: 2, name: 'contribuidores' },
-            { type: 'log', gridIndex: 3, name: 'contribuidores' },           
+            { type: 'log', gridIndex: 0, name: 'Contribuidores' },
+            { type: 'log', gridIndex: 1, name: 'Contribuidores' },
+            { type: 'log', gridIndex: 2, name: 'Forks' },
+            { type: 'log', gridIndex: 3, name: 'Contribuidores' },           
         ],
         xAxis: [
-            { type: 'log', gridIndex: 0, name: 'star', axisLabel: { rotate: 50, interval: 0 } },
-            { type: 'category', gridIndex: 1, name: 'linguagem', boundaryGap: false, axisLabel: { rotate: 50, interval: 0 } },
-            { type: 'log', gridIndex: 2, name: 'star', axisLabel: { rotate: 50, interval: 0 } },
-            { type: 'log', gridIndex: 3, name: 'pulls', axisLabel: { rotate: 50, interval: 0 } }
+            { type: 'log', gridIndex: 0, name: 'Star', axisLabel: { rotate: 50, interval: 0 } },
+            { type: 'category', gridIndex: 1, name: 'Linguagem', boundaryGap: true, axisLabel: { rotate: 50, interval: 0 }, data: ['JavaScript', 'Java', 'Python', 'Go', 'HTML', 'C++', 'Ruby', 'C', 'Objective-C', 'PHP', 'CSS', 'Shell', 'Swift', 'TypeScript', 'Jupyter Notebook', 'C#', 'Vim script', 'Kotlin', 'Vue', 'Scala'  ]},
+            { type: 'log', gridIndex: 2, name: 'Star', axisLabel: { rotate: 50, interval: 0 } },
+            { type: 'log', gridIndex: 3, name: 'Pulls', axisLabel: { rotate: 50, interval: 0 } }
         ],
         dataset: {
             dimensions: [
@@ -39,6 +40,7 @@ fetch(`https://raw.githubusercontent.com/DanielVenturini/solid-visualization/mas
                 'contribuidores',
                 'linguagem',
                 'pulls',
+                'Repositorio'
             ],
             source: data
         },
@@ -49,9 +51,9 @@ fetch(`https://raw.githubusercontent.com/DanielVenturini/solid-visualization/mas
                 xAxisIndex: 0,
                 yAxisIndex: 0,
                 encode: {
-                    y: 'forks',
+                    y: 'contribuidores',
                     x: 'star',
-                    tooltip: [0, 1, 2, 3, 4]
+                    tooltip: [5, 0, 1, 2, 3, 4]
                 }
             },
             {
@@ -62,7 +64,7 @@ fetch(`https://raw.githubusercontent.com/DanielVenturini/solid-visualization/mas
                 encode: {
                     y: 'contribuidores',
                     x: 'linguagem',
-                    tooltip: [0, 1, 2, 3, 4]
+                    tooltip: [5, 0, 1, 2, 3, 4],
                 }
             },
             {
@@ -71,9 +73,9 @@ fetch(`https://raw.githubusercontent.com/DanielVenturini/solid-visualization/mas
                 xAxisIndex: 2,
                 yAxisIndex: 2,
                 encode: {
-                    y: 'contribuidores',
+                    y: 'forks',
                     x: 'star',
-                    tooltip: [0, 1, 2, 3, 4]
+                    tooltip: [5, 0, 1, 2, 3, 4]
                 }
             },
             {
@@ -84,7 +86,7 @@ fetch(`https://raw.githubusercontent.com/DanielVenturini/solid-visualization/mas
                 encode: {
                     y: 'contribuidores',
                     x: 'pulls',
-                    tooltip: [0, 1, 2, 3, 4]
+                    tooltip: [5, 0, 1, 2, 3, 4]
                 }
             },
         ]
