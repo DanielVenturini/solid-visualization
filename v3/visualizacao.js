@@ -51,7 +51,7 @@ option = {
     calendar: [{
         top: 100,
         left: 'center',
-        range: ['2017-11-18', '2018-11-16'],
+        range: ['2017-11-25', '2018-11-20'],
         splitLine: {
             show: true,
             lineStyle: {
@@ -76,7 +76,7 @@ option = {
     }, {
         top: 340,
         left: 'center',
-        range: ['2017-11-18', '2018-11-16'],
+        range: ['2017-11-25', '2018-11-20'],
         splitLine: {
             show: true,
             lineStyle: {
@@ -86,7 +86,7 @@ option = {
             }
         },
         yearLabel: {
-            formatter: '2018',
+            formatter: '2017',
             textStyle: {
                 color: '#000'
             }

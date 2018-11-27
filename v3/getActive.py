@@ -115,7 +115,7 @@ fileNew = 'analise/top50Novo.json'
 #getActive(fileOlds)
 #getActive(fileNew)
 
-getChangedData(fileOlds + 'RESULT.json', 'const dadosAntigosNormal = ', 'w', 0, 100)
-getChangedData(fileOlds + 'RESULT.json', 'const dadosAntigosAltaAtividade = ', 'a', 100, 1000)
-getChangedData(fileNew + 'RESULT.json', 'const dadosNovosNormal = ', 'a', 0, 100)
-getChangedData(fileNew + 'RESULT.json', 'const dadosNovosAltaAtividade = ', 'a', 100, 1000)
+getChangedData(fileOlds + 'RESULT.json', 'const dadosAntigosNormal = ', 'w', 0, 104)
+getChangedData(fileOlds + 'RESULT.json', 'const dadosAntigosAltaAtividade = ', 'a', 105, 1000)
+getChangedData(fileNew + 'RESULT.json', 'const dadosNovosNormal = ', 'a', 0, 104)
+getChangedData(fileNew + 'RESULT.json', 'const dadosNovosAltaAtividade = ', 'a', 105, 1000)
