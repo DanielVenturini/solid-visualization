@@ -3,7 +3,8 @@ var myChart = echarts.init(document.getElementById('view'));
 fetch(`https://raw.githubusercontent.com/DanielVenturini/solid-visualization/master/Data/v4-4.json`)
     .then(response => response.json())
     .then(function(data){
-    var sizeValue = '58%'
+    console.log(data)
+        var sizeValue = '58%'
     var symbolSize = 3.5
     option = {
         legend: {},
