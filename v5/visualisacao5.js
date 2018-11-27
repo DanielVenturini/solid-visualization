@@ -1,6 +1,6 @@
 var myChart = echarts.init(document.getElementById('view'));
 
-// [The Unlicense, 12960, 2156, 1],
+//     [The Unlicense, 12960, 2156, 1],
 //     [GNU Lesser General Public License v2.1, 1217, 23, 1],
 //     [Creative Commons Attribution 4.0 International, 136, 123, 2],
 //     [GNU Lesser General Public License v3.0, 3136, 769, 1],
