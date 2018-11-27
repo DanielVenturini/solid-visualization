@@ -86,7 +86,7 @@ for (var j in test_data) {
     if (legend.indexOf(test_data[j]["nome"] == -1)) {
         legend.push({
             'icon': 'rect',
-            "nome": test_data[j]["nome"]
+            "name": test_data[j]["nome"]
         });
     }
     var ra = test_data.length - 1 - j;

@@ -55,7 +55,10 @@ fetch(`https://raw.githubusercontent.com/DanielVenturini/solid-visualization/mas
                     y: 'contribuidores',
                     x: 'star',
                     tooltip: [5, 0, 1, 2, 3, 4]
-                }
+                },
+            
+                
+                
             },
             {
                 type: 'scatter',
@@ -66,7 +69,8 @@ fetch(`https://raw.githubusercontent.com/DanielVenturini/solid-visualization/mas
                     y: 'contribuidores',
                     x: 'license',
                     tooltip: [5, 0, 1, 2, 3, 4],
-                }
+                },
+            
             },
             {
                 type: 'scatter',
@@ -77,7 +81,8 @@ fetch(`https://raw.githubusercontent.com/DanielVenturini/solid-visualization/mas
                     y: 'forks',
                     x: 'star',
                     tooltip: [5, 0, 1, 2, 3, 4]
-                }
+                },
+            
             },
             {
                 type: 'scatter',
@@ -88,7 +93,8 @@ fetch(`https://raw.githubusercontent.com/DanielVenturini/solid-visualization/mas
                     y: 'contribuidores',
                     x: 'pulls',
                     tooltip: [5, 0, 1, 2, 3, 4]
-                }
+                },
+            
             },
         ]
     };
