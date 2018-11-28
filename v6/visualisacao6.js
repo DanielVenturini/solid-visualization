@@ -11,7 +11,7 @@ var data = echarts.dataTool.prepareBoxplotData([
 option = {
     title: [
         {
-            text: 'Michelson-Morley Experiment',
+            text: 'Relação Contribuidores e Forks',
             left: 'center',
         },
         {
@@ -39,8 +39,10 @@ option = {
     // eixo x
     // aqui luiz, deve trocar de 'category' para 'value' e retornar a quantidade de commits.
     // pode fazer como na linha 72, só que o parâmetro que é passado é meio estranho.
+
+    // o eixo x será dividido em 4 partes: 1,000; 10,000; 100,000; e 1,000,000.
     xAxis: {
-        type: 'category',
+        type: 'value',
         name: 'Forks',
         data: data.axisData,
         boundaryGap: true,
@@ -48,14 +50,16 @@ option = {
         splitArea: {
             show: false
         },
+        // 'expr {value}'
         axisLabel: {
-            formatter: 'expr {value}'
+            formatter: function(param) {
+                console.log('oi-> ' + param)
+            }
         },
         splitLine: {
             show: false
         }
     },
-    // eixo y
     yAxis: {
         type: 'value',
         name: 'Contribuidores',
