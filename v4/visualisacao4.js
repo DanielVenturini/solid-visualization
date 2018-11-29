@@ -29,10 +29,10 @@ fetch(`https://raw.githubusercontent.com/DanielVenturini/solid-visualization/mas
             { type: 'log', gridIndex: 3, name: 'Contribuidores' },           
         ],
         xAxis: [
-            { type: 'log', gridIndex: 0, name: 'Star', axisLabel: { rotate: 50, interval: 0 } },
-            { type: 'category', gridIndex: 1, name: 'license', boundaryGap: true, axisLabel: { rotate: 50, interval: 0 }, data: ['MIT License', 'Other', 'Apache 2.0', 'copyright', 'GNU GPL v3.0', "BSD 3-Clause", 'Mozilla 2.0', 'GNU GPL v2.0', "BSD 2-'Simplified'", 'CC Zero v1.0', 'CC 4.0']},
-            { type: 'log', gridIndex: 2, name: 'Star', axisLabel: { rotate: 50, interval: 0 } },
-            { type: 'log', gridIndex: 3, name: 'Pulls', axisLabel: { rotate: 50, interval: 0 } }
+            { type: 'log', gridIndex: 0, name: 'Star',  axisLabel:{ rotate: 50, interval: 0 } },
+            { type: 'log', gridIndex: 1, name: 'Forks', axisLabel: { rotate: 50, interval: 0 } },
+            { type: 'log', gridIndex: 2, name: 'Star',  axisLabel:{ rotate: 50, interval: 0 } },
+            { type: 'log', gridIndex: 3, name: 'Pulls', axisLabel: { rotate: 50, interval: 0 } },
         ],
         dataset: {
             dimensions: [
@@ -56,8 +56,6 @@ fetch(`https://raw.githubusercontent.com/DanielVenturini/solid-visualization/mas
                     x: 'star',
                     tooltip: [5, 0, 1, 2, 3, 4]
                 },
-            
-                
                 
             },
             {
@@ -67,7 +65,7 @@ fetch(`https://raw.githubusercontent.com/DanielVenturini/solid-visualization/mas
                 yAxisIndex: 1,
                 encode: {
                     y: 'contribuidores',
-                    x: 'license',
+                    x: 'forks',
                     tooltip: [5, 0, 1, 2, 3, 4],
                 },
             
